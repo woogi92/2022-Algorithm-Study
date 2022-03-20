@@ -2,31 +2,20 @@
 
 int main()
 {
-    int startH, startM, needM;
-    int endH, endM;
+    int currentH, currentM, needM;
+    int resultH, resultM;
 
-    scanf("%d %d", &startH, &startM);
-    scanf("%d", &needM);
-
-    if(needM >= 60) {
-        startH += 1;
-        needM -= 60;
-    }
     
-    endH = startH;
-    endM = startM + needM;
-    if(endM > 59)
-    {
-        endM -= 60;
-        
-        endH = startH + 1;
-        if(endH > 23) {
-            endH = 0;
-        }
+    scanf("%d %d %d", &currentH, &currentM, &needM);
+
+    resultM = (currentM + needM) % 60;
+    resultH = currentH + (currentM + needM)/60; 
+
+    if(resultH >= 24) {
+        resultH -= 24;
     }
 
+    printf("%d %d", resultH, resultM);
 
-    printf("%d %d", endH, endM);
-    
     return 0;
 }
