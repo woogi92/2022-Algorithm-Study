@@ -15,6 +15,6 @@ hour += Math.floor(min / 60);
 if (hour >= 24) {
   hour -= 24;
 }
-min = min % 60;
+min %= 60;
 
 console.log(hour, min);

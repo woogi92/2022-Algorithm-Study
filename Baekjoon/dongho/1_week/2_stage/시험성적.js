@@ -5,7 +5,7 @@ let input = fs
   )
   .toString();
 let score = parseInt(input);
-let grade = "";
+let grade;
 if (score >= 90 && score <= 100) {
   grade = "A";
 } else if (score >= 80 && score <= 89) {
