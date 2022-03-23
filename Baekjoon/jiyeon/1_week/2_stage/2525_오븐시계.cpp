@@ -5,7 +5,6 @@ int main()
     int currentH, currentM, needM;
     int resultH, resultM;
 
-    
     scanf("%d %d %d", &currentH, &currentM, &needM);
 
     resultM = (currentM + needM) % 60;
