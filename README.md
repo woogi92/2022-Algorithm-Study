@@ -56,3 +56,4 @@
 | ------------------ | ------ | --------------------------------------------------- | -------- |
 | 1주차(03.14~03.20) | 1_week | [입출력과 사칙연산](https://www.acmicpc.net/step/1) | [if문](https://www.acmicpc.net/step/4) |
 | 2주차(03.21~03.27) | 2_week | [for문](https://www.acmicpc.net/step/3)             | [while문](https://www.acmicpc.net/step/3)
+| 3주차(03.28~04.03) | 3_week | [1차원 배열](https://www.acmicpc.net/step/6) |
