@@ -6,10 +6,10 @@ let input = fs
   .toString();
 
 let num = parseInt(input);
-let val = 0;
+let sum = 0;
 
 for (let i = 1; i <= num; i++) {
-  val += i;
+  sum += i;
 }
 
-console.log(val);
+console.log(sum);
