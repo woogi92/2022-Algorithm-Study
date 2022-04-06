@@ -7,7 +7,7 @@ int main ()
 
     cin >> n;
 
-    int arr[n+1];
+    int arr[n];
     int min = 1000000;
     int max = -1000000;
     

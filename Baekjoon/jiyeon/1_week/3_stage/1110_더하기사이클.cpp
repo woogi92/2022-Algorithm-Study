@@ -12,9 +12,9 @@ int main()
     
     while(true)
     {
-        sum = (newN / 10) + (newN % 10);
+        sum = (newN / 10) + (newN % 10);  
 
-        newN = (newN % 10) * 10 + sum % 10;
+        newN = (newN % 10) * 10 + sum % 10; 
 
         count++;
      
