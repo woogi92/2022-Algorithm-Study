@@ -1,28 +1,43 @@
 #include <iostream>
 #include <cmath>
-
 using namespace std;
+
 int main()
 {
     int c, n;
     int score[1000] = {0};
-    int sum;
-    float average;
+    float average = 0;
+    int count = 0;
 
     cin >> c;
     
     for(int i = 0; i < c; i++)
     {
         cin >> n;
-        average = 0;
+
         for(int j = 0; j < n; j++) 
         {
             cin >> score[j];
-            average += score[j];
+            average += (float)score[j];
         }
+
+        average /= (float)n;
+
+        for(int j = 0; j < n; j++)
+        {
+            if(average < score[j]) {
+                count++;
+            }
+        }
+        
         cout << fixed;
         cout.precision(3);
-        cout << round(average/n) << "%\n";
+        float rate = (float)count/n * 100;
+        cout << round(rate  * 1000) / 1000 << "%\n";
+        
+
+       average = 0;
+       count = 0;
     }
 
 
