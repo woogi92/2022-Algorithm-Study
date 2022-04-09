@@ -7,8 +7,6 @@ let input = fs
   .trim()
   .split("\n");
 
-// 출력은 맞는데 백준에서는 틀렸다고 나온 내 코드
-
 const numbers = input.map((x) => Number(x));
 let leftNumArray = [];
 
@@ -44,5 +42,6 @@ console.log(leftNumArray.length);
 // Set 객체 사용
 const numbers = input.map((x) => Number(x % 42));
 const leftNumObj = new Set(numbers); // set 객체로 만들어서 중복을 제거 한다.
-const leftNumArray = [...leftNumObj];
-console.log(leftNumArray.length);
+console.log(leftNumObj.size);
+//const leftNumArray = [...leftNumObj];
+//console.log(leftNumArray.length);
