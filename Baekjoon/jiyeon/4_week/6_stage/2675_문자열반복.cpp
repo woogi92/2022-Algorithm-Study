@@ -28,7 +28,7 @@ int main()
         cin >> r >> s;
         for(int j = 0; j < s.length(); j++)
         {
-            p.append(repeat(s.at(j), r));
+            p += repeat(s.at(j), r);
         }
         cout << p << "\n";
     }
