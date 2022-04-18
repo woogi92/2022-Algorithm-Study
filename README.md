@@ -71,5 +71,5 @@
 | 1주차(03.14~03.20) | 1_week | [입출력과 사칙연산](https://www.acmicpc.net/step/1) | [if문](https://www.acmicpc.net/step/4)    |
 | 2주차(03.21~03.27) | 2_week | [for문](https://www.acmicpc.net/step/3)             | [while문](https://www.acmicpc.net/step/3) |
 | 3주차(03.28~04.03) | 3_week | [1차원 배열](https://www.acmicpc.net/step/6)        |
-| 4주차(04.08~04.15) | 4_week | [함수](https://www.acmicpc.net/step/5)              | [문자열](https://www.acmicpc.net/step/7)  |
-| 5주차(04.16~04.22) | 5_week |                                                     |
+| 4주차(04.08~04.15) | 4_week | [함수](https://www.acmicpc.net/step/5)              | [문자열-1](https://www.acmicpc.net/step/7)  |
+| 5주차(04.16~04.22) | 5_week | [문자열-2](https://www.acmicpc.net/step/7) |
