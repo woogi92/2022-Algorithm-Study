@@ -34,7 +34,8 @@ int main()
     return 0;
 }
 
-/* 다른 사람이 푼 코드 (이중 포문을 쓰지 않아도 된다)
+// 다른 사람이 푼 코드 (이중 포문을 쓰지 않아도 된다)
+/*
 for(int i = 0; i < s.length(); i++)
 {
     if(alphabet[(int)s[i]-97] < 0)
