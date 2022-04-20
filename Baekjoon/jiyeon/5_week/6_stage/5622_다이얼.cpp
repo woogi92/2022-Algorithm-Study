@@ -15,20 +15,11 @@ int main()
     {
         int ascii = (int)input.at(i) - 65;  // 문자의 아스키 코드
         int quotient = ascii / 3;           // 아스키코드 / 3의 몫
-        int remainder = ascii % 3;          // 아스키코드 % 3의 나머지
 
         dialNum = quotient + 2;
 
         // 예외인 경우의 다이얼 번호 다시 설정
-        if(quotient == 8)
-        {
-            dialNum--;
-        }
-        if(quotient == 6 && remainder == 0)
-        {
-            dialNum--;    
-        }
-        if(quotient == 7 && remainder == 0)
+        if(input[i] == 'S' || input[i] == 'V' || input[i] == 'Y' || input[i] == 'Z')
         {
             dialNum--;
         }
