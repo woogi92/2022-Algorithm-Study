@@ -73,3 +73,4 @@
 | 3주차(03.28~04.03) | 3_week | [1차원 배열](https://www.acmicpc.net/step/6)        |
 | 4주차(04.08~04.15) | 4_week | [함수](https://www.acmicpc.net/step/5)              | [문자열-1](https://www.acmicpc.net/step/7)  |
 | 5주차(04.16~04.22) | 5_week | [문자열-2](https://www.acmicpc.net/step/7) |
+| 6주차(04.23~04.29) | 6_week | [기본 수학 1](https://www.acmicpc.net/step/8) |
