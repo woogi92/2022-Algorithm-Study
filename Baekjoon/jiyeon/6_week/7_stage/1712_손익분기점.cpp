@@ -5,11 +5,11 @@ using namespace std;
 // 손익분기점을 얻는 함수
 int GetBreakEvenPoint(int fixedCost, int variableCost, int price)
 {
-    int count = fixedCost;                          // 노트북 판매 수
+    int count;                          // 노트북 판매 수
 
     if(price - variableCost <= 0)
     {
-        count = -1;
+        count = fixedCost - 1;
     }
 
     // 손익분기점 = A / (C-B)  +1
