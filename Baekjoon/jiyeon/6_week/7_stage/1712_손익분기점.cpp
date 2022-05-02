@@ -9,7 +9,7 @@ int GetBreakEvenPoint(int fixedCost, int variableCost, int price)
 
     if(price - variableCost <= 0)
     {
-        count = fixedCost - 1;
+        count = -1;
     }
 
     // 손익분기점 = A / (C-B)  +1
