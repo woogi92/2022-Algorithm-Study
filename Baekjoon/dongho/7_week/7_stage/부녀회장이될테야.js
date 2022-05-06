@@ -10,8 +10,8 @@ const input = fs
 const T = input.shift();
 
 for (let i = 0; i < T; i++) {
-  const a = input.shift();
-  const b = input.shift();
+  const a = input.shift(); // 1
+  const b = input.shift(); // 3
   const apartment = [];
 
   for (let i = 0; i <= a; i++) {
