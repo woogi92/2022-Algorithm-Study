@@ -4,12 +4,12 @@ using namespace std;
 
 // 재귀함수를 사용했을 때의 코드
 
-int getNum(int a, int b){
-  if(b == 1)
+int getNum(int k, int n){
+  if(n == 1)
     return 1;
-  if(a == 0)
-    return b;
-  return (getNum(a-1, b) + getNum(a, b-1));
+  if(k == 0)
+    return n;
+  return (getNum(k-1, n) + getNum(k, n-1));
 }
 
 int main() {
