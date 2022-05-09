@@ -33,7 +33,7 @@ int main()
         int sum = (char_a - '0') + (char_b - '0') + carry;
 
         // 각 자리수를 더했을 때 올림값(10의 자리 수) 계산
-        carry = (sum >= 10) ? carry = sum/10 : 0;
+        carry = sum/10;
 
         // 각 자리수를 더했을 때 1의 자리수 계산
         char remain = sum % 10 + '0';
