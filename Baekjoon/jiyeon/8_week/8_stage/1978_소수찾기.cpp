@@ -11,9 +11,9 @@ bool CheckPrimeNumber(int num)
         isPrimeNumber =  false;
     }
 
-    for(int i = 2; i < num - 1; i++)
+    for(int i = 2; i < num-1; i++)
     {
-        if(num % (num-i) == 0)
+        if(num % (num - i) == 0)
         {
             isPrimeNumber = false;
             break;
