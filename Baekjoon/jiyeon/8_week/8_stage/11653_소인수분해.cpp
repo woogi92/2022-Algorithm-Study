@@ -3,22 +3,6 @@
 
 using namespace std;
 
-bool isPrimeNum(int n)
-{
-    if(n == 1)
-    {
-        return false;
-    }
-    for(int i = 2; i <= sqrt(n); i++)
-    {
-        if(n % i == 0)
-        {
-            return false;
-        }
-    }
-    return true;
-}
-
 int main()
 {
     int n;
@@ -28,7 +12,7 @@ int main()
 
     while( n != 1)
     {
-        if(n % divisor == 0 && isPrimeNum(divisor))
+        if(n % divisor == 0)
         {
             cout << divisor << "\n";
             n /= divisor;
