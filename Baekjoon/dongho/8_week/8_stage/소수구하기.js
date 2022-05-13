@@ -14,7 +14,6 @@ for (let i = 2; i <= Math.ceil(Math.sqrt(m)); i++) {
   }
 
   for (let j = i ** 2; j <= m; j += i) {
-    console.log(j);
     prime[j] = true;
   }
 }
