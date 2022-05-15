@@ -6,13 +6,12 @@ const input = fs
     "/Users/dongho/Desktop/Github/2022-Algorithm-Study/Baekjoon/dongho/input/input.txt"
   )
   .toString()
-  .split(" ")
-  .map(BigInt);
+  .split(" ");
 
 let A = input[0].toString().split("");
 let B = input[1].toString().split("");
 let up = 0; // 올림 값
-let output = [];
+let output = []; // 출력 값
 
 while (A.length !== 0 && B.length !== 0) {
   const plusValue = Number(A.pop()) + Number(B.pop()) + up;
@@ -34,7 +33,6 @@ else if (up !== 0) {
 
 console.log(output.join(""));
 */
-
 // 다른 사람 코드
 let fs = require("fs");
 let input = fs
