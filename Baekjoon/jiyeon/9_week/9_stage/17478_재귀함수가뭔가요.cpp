@@ -17,14 +17,16 @@ void ChatBot(int num, int tapCount)
     
     string tap = "";
 
-    for(int i = 0; i < tapCount; i++)
-    {
-        tap += "____";
-    }
     if(num < 0)
     {
         return;
     }
+    
+    for(int i = 0; i < tapCount; i++)
+    {
+        tap += "____";
+    }
+   
    
     cout << tap << question << "\n";
     if(num == 0)

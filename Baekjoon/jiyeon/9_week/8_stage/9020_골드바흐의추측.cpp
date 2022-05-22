@@ -31,7 +31,7 @@ int main()
 
     for(; i++<T;)
     {
-        int n, a, b, half;
+        int n, half;
 
         cin >> n;
         half = n/2;
