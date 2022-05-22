@@ -1,5 +1,10 @@
 const fs = require("fs");
-const input = fs.readFileSync("/dev/stdin").toString().split("\n");
+const input = fs
+  .readFileSync(
+    "/Users/dongho/Desktop/Github/2022-Algorithm-Study/Baekjoon/dongho/input/input.txt"
+  )
+  .toString()
+  .split("\n");
 const num = parseInt(input[0]);
 
 const lines = [];
