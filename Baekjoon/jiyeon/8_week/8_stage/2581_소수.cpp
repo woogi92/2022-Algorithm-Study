@@ -48,6 +48,7 @@ int main()
     else
     {
         cout << primeNumSum << "\n" << minPrimeNum;
+        cout << primeNumCount;
     }    
     
     return 0;
