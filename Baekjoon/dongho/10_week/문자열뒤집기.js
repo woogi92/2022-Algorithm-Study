@@ -5,6 +5,8 @@ const input = fs
   )
   .toString();
 
-const reverseString = (str) => {};
+const reverseString = (str) => {
+  
+};
 
 reverseString(input);
