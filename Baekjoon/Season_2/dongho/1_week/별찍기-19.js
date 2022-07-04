@@ -7,11 +7,19 @@ let input = fs
 
 const lines = [];
 
-const drawstar = (i, j, num) => {
-  if (i % 2 === 0 || j % 2 === 0) {
-    lines.push("*");
+const drawstar = (i, j, start, end) => {
+  if (i === start || j === start || i === end || j === end) {
+    if (i >= start && i <= end && j >= start && j <= end) {
+      lines.push(" ");
+    } else {
+      lines.push("*");
+    }
   } else {
-    lines.push(" ");
+    if (start > end) {
+      lines.push("*");
+    } else {
+      drawstar(i, j, start + 2, end - 2);
+    }
   }
 };
 
@@ -19,12 +27,11 @@ const createSpace = (num) => {
   const size = 4 * (num - 1);
   for (let i = 0; i <= size; i++) {
     for (let j = 0; j <= size; j++) {
-      drawstar(i, j, size);
+      drawstar(i, j, 1, size - 1);
     }
     lines.push("\n");
   }
 };
 
 createSpace(+input);
-console.log(lines);
-//console.log(lines.join("").trim());
+console.log(lines.join("").trim());
