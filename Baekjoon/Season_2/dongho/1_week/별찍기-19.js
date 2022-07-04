@@ -8,18 +8,16 @@ let input = fs
 const lines = [];
 
 const drawstar = (i, j, start, end) => {
-  if (i === start || j === start || i === end || j === end) {
+  if (start > end) {
+    lines.push("*");
+  } else if (i === start || j === start || i === end || j === end) {
     if (i >= start && i <= end && j >= start && j <= end) {
       lines.push(" ");
     } else {
       lines.push("*");
     }
   } else {
-    if (start > end) {
-      lines.push("*");
-    } else {
-      drawstar(i, j, start + 2, end - 2);
-    }
+    drawstar(i, j, start + 2, end - 2);
   }
 };
 
