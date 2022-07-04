@@ -30,7 +30,7 @@
 ### Pull Request 규칙
 
 - Pull Request 전, 자신이 fork한 저장소의 커밋 내역을 `원격 저장소의 최신 커밋` 으로 `fetch & merge` 한 이후에 진행한다.
-- Pull Request 명칭은 [ `사이트명` - `스테이지명` ] `작성자명` 으로 통일한다.
+- Pull Request 명칭은 [ `사이트명` - `주차` ] `작성자명` 으로 통일한다.
 
 #### Reviewers
 
