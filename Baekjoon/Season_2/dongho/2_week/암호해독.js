@@ -30,7 +30,7 @@ const isInclude = (word) => {
 
 const ASCIItoString = (ASCII) => {
   ASCII = ASCII.map((code) => String.fromCharCode(String(code + 97)));
-  return ASCII.join("").trim();
+  return ASCII.join("");
 };
 
 let password = stringToASCII(input[0]); // 암호문
