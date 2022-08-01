@@ -7,21 +7,13 @@ let input = fs
   .split("\n")
   .map((x) => +x);
 
-const clientsNum = input.shift();
-const clients = input;
-let maxLength = 1;
-
 const removeClients = (clients, GB) => {
   return clients.filter((x) => x !== GB);
 };
 
 const searchMaxLength = (clients) => {
   let count = 1;
-  for (let i = 0; i < clients.length; i++) {
-    // 배열의 마지막 인덱스에 도달했을 경우 break
-    if (i + 1 === clients.length) {
-      break;
-    }
+  for (let i = 0; i < clients.length - 1; i++) {
     if (clients[i] === clients[i + 1]) {
       count++;
       if (count > maxLength) {
@@ -48,5 +40,9 @@ const main = () => {
   }
   console.log(maxLength);
 };
+
+const clientsNum = input.shift();
+const clients = input;
+let maxLength = 1;
 
 main();
