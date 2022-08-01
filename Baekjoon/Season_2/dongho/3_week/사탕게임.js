@@ -58,7 +58,6 @@ const checkContinuity = (boards, type, i, j) => {
 
 const N = +input.shift();
 const inputBoards = [...input];
-let boards = [];
 for (let i = 0; i < N; i++) {
   const tmp = inputBoards[i].split("");
   boards.push(tmp);
