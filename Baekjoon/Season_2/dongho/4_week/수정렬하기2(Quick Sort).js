@@ -8,6 +8,12 @@ let input = fs
   .split("\n")
   .map((x) => +x);
 
+const swapNumber = (array, index1, index2) => {
+  const tmp = array[index1];
+  array[index1] = array[index2];
+  array[index2] = tmp;
+};
+
 const quickSort = (array, start, end) => {
   const pivot = array[Math.floor((start + end) / 2)];
   let LIndex = start;
@@ -18,9 +24,7 @@ const quickSort = (array, start, end) => {
     while (array[RIndex] > pivot) RIndex--;
 
     if (LIndex <= RIndex) {
-      const tmp = array[LIndex];
-      array[LIndex] = array[RIndex];
-      array[RIndex] = tmp;
+      swapNumber(array, LIndex, RIndex);
       LIndex++;
       RIndex--;
     }
@@ -34,4 +38,5 @@ const quickSort = (array, start, end) => {
 
 const N = input.shift();
 
-console.log(quickSort(input, 0, N - 1).join("\n"));
+const array = quickSort(input, 0, N - 1);
+console.log(array.join("\n"));
