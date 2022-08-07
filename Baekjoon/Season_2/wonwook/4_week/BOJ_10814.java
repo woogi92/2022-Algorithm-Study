@@ -59,8 +59,13 @@ public class BOJ_10814 {
             pi[i].setRank(i+1);
         }
 
-        Arrays.sort(pi);
-
+        Arrays.sort(pi, (o1, o2)->{
+            if (o1.getAge() == o2.getAge()) {
+                return o1.getRank() - o2.getRank();
+            }else{
+                return o1.getAge() - o2.getAge();
+            }
+        });
         for(PersonInfo personInfo1 : pi){
             System.out.println(personInfo1.getAge() + " " + personInfo1.getName());
         }
