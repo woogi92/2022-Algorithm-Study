@@ -25,7 +25,11 @@ class Words implements Comparable<Words>{
 
     @Override
     public int compareTo(Words o) {
-        return (this.str.compareTo(o.getStr()));
+        if (this.getLen() == o.getLen()) {
+            return this.getStr().compareTo(o.getStr());
+        } else{
+            return this.getLen() - o.getLen();
+        }
     }
 }
 public class BOJ_1181 {
@@ -40,6 +44,7 @@ public class BOJ_1181 {
             words[i].setStr(str);
             words[i].setLen(str.length());
         }
+
         Arrays.sort(words, (o1, o2) -> {
             if (o1.getLen() == o2.getLen()) {
                 return o1.getStr().compareTo(o2.getStr());
@@ -48,11 +53,11 @@ public class BOJ_1181 {
             }
         });
 
-
-        for(int i=0; i<n; i++){
+        for(int i=0; i<n-1; i++){
             if (!words[i].getStr().equals(words[i + 1].getStr())) {
                 System.out.println(words[i].getStr());
             }
         }
+        System.out.println(words[n-1].getStr());
     }
 }
