@@ -27,7 +27,6 @@ input.forEach((country) => {
 
 const k = findCountry(countries, K);
 
-let index = 0;
 let rank = 1;
 
 for (let i = 0; i < N; i++) {

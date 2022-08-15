@@ -62,8 +62,7 @@ const getMode = () => {
     pv[cv] = (pv[cv] || 0) + 1;
     return pv;
   }, {});
-
-  const modeNum = Math.max.apply(null, Object.values(object)); // 최빈값 최대 개수 구하기
+  const modeNum = Math.max.apply(null, Object.values(object)); // 출연 빈도 최댓값 구하기
 
   // 최빈값(들) 구하기
   let modes = [];
