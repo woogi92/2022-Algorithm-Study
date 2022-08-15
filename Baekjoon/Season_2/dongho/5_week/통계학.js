@@ -85,7 +85,7 @@ const getRange = () => {
 
 const N = input.shift();
 mergeSort(0, N - 1);
-console.log(getAverage());
-console.log(getMidValue());
-console.log(getMode());
-console.log(getRange());
+console.log(getAverage()); // 산술평균
+console.log(getMidValue()); // 중앙값
+console.log(getMode()); // 최빈값
+console.log(getRange()); // 범위
