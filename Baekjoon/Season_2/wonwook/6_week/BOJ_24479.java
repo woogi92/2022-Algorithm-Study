@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.StringTokenizer;
 
-public class BOJ_22479 {
+public class BOJ_24479 {
     public static int cnt;
     public static int[] visited;
     public static ArrayList<ArrayList<Integer>> aList;
