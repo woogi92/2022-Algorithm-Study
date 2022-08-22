@@ -27,14 +27,14 @@ int main()
         sort(grades.begin(), grades.end());
 
         int result = 1;
-        int temp = 0;
+        int interviewScore = grades[0].second;
 
         for(int i = 1; i < n; i++)
         {
-            if(grades[temp].second > grades[i].second)
+            if(interviewScore > grades[i].second)
             {
                 result++;
-                temp = i;
+                interviewScore = grades[i].second;
             }
         }
 
