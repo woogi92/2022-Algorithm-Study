@@ -1,17 +1,4 @@
-5 11
-baekjoononlinejudge
-startlink
-codeplus
-sundaycoding
-codingsh
-baekjoon
-codeplus
-codeminus
-startlink
-starlink
-sundaycoding
-codingsh
-codinghs
-sondaycoding
-startrink
-icerink
+10
+6 3 2 10 10 10 -10 -10 7 3
+8
+10 9 -5 2 3 4 5 -10
