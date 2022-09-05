@@ -7,49 +7,21 @@
 let fs = require("fs");
 let input = fs
   .readFileSync(
-    "/Users/dongho/Desktop/Github/2022-Algorithm-Study/Baekjoon/Season_2/dongho/input.txt"
+    "/Users/User/Desktop/github/2022-Algorithm-Study/Baekjoon/Season_2/dongho/input.txt"
   )
   .toString()
   .split("\n");
 
-const binarySeach = (handCards, checkCard, start, end) => {
-  const mid = Math.floor((start + end) / 2); // 중간 인덱스
-  // 함수 종료조건
-  if (handCards[mid] === checkCard) {
-    let count = 1;
-    let index = mid;
-
-    while (index > 0 && index < handCards.length) {
-      if (handCards[--index] === checkCard) {
-        count++;
-      } else {
-        break;
-      }
+const lowerBound = (handCards, checkCard, start, end) => {
+  while (start <= end) {
+    const mid = Math.floor((start + end) / 2);
+    if (handCards[mid] >= checkCard) {
+      end = mid - 1;
+    } else {
+      start = mid + 1;
     }
-    index = mid;
-    while (index > 0 && index < handCards.length) {
-      if (handCards[++index] === checkCard) {
-        count++;
-      } else {
-        break;
-      }
-    }
-    output += `${count} `;
-    return;
   }
-  if (start >= end) {
-    output += `0 `;
-    return;
-  }
-
-  // 좌측 탐색
-  if (handCards[mid] > checkCard) {
-    binarySeach(handCards, checkCard, start, mid - 1);
-  }
-  // 우측 탐색
-  if (handCards[mid] < checkCard) {
-    binarySeach(handCards, checkCard, mid + 1, end);
-  }
+  output += `${end} `;
 };
 
 // 1. 입력값 받기
@@ -66,11 +38,12 @@ const checkCards = input
 
 // 2. 핸드 카드 오름차순 정렬
 handCards.sort((a, b) => a - b);
+console.log(handCards);
 
 // 3. 이분탐색
 let output = ""; // 출력값 저장
 checkCards.forEach((checkCard) => {
-  binarySeach(handCards, checkCard, 0, N - 1);
+  lowerBound(handCards, checkCard, 0, N - 1);
   // 매개변수(검색할 배열, 찾을 숫자, 배열의 첫 인덱스, 배열의 끝 인덱스)
 });
 
