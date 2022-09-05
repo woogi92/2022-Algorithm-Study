@@ -13,15 +13,32 @@ let input = fs
   .split("\n");
 
 const lowerBound = (handCards, checkCard, start, end) => {
-  while (start <= end) {
-    const mid = Math.floor((start + end) / 2);
-    if (handCards[mid] >= checkCard) {
-      end = mid - 1;
-    } else {
-      start = mid + 1;
-    }
+  if (start >= end) {
+    low = end;
+    return;
   }
-  output += `${end} `;
+  const mid = Math.floor((start + end) / 2);
+  if (handCards[mid] >= checkCard) {
+    lowerBound(handCards, checkCard, start, mid);
+  } else {
+    lowerBound(handCards, checkCard, mid + 1, end);
+  }
+};
+
+const upperBound = (handCards, checkCard, start, end) => {
+  if (start >= end) {
+    if (handCards[end] === checkCard) {
+      end++;
+    }
+    up = end;
+    return;
+  }
+  const mid = Math.floor((start + end) / 2);
+  if (handCards[mid] > checkCard) {
+    upperBound(handCards, checkCard, start, mid);
+  } else {
+    upperBound(handCards, checkCard, mid + 1, end);
+  }
 };
 
 // 1. 입력값 받기
@@ -38,12 +55,15 @@ const checkCards = input
 
 // 2. 핸드 카드 오름차순 정렬
 handCards.sort((a, b) => a - b);
-console.log(handCards);
 
 // 3. 이분탐색
 let output = ""; // 출력값 저장
+let low;
+let up;
 checkCards.forEach((checkCard) => {
   lowerBound(handCards, checkCard, 0, N - 1);
+  upperBound(handCards, checkCard, 0, N - 1);
+  output += `${up - low} `;
   // 매개변수(검색할 배열, 찾을 숫자, 배열의 첫 인덱스, 배열의 끝 인덱스)
 });
 
