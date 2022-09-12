@@ -1,17 +1,18 @@
 /*
   1. 입력값 받기
   2. 핸드 카드 오름차순 정렬
-  3. 이분탐색
+  3. Upper Bound, Lower Bound 알고리즘을 이용해 인덱스 값 구하기
   4. 출력
 */
 let fs = require("fs");
 let input = fs
   .readFileSync(
-    "/Users/User/Desktop/github/2022-Algorithm-Study/Baekjoon/Season_2/dongho/input.txt"
+    "/Users/dongho/Desktop/Github/2022-Algorithm-Study/Baekjoon/Season_2/dongho/input.txt"
   )
   .toString()
   .split("\n");
 
+// Lower Bound: checkCard보다 큰 첫번째 위치(초과)를 반환
 const lowerBound = (handCards, checkCard, start, end) => {
   if (start >= end) {
     low = end;
@@ -25,6 +26,7 @@ const lowerBound = (handCards, checkCard, start, end) => {
   }
 };
 
+// Upper Bound: checkCard보다 크거나 같은 첫번째 위치(이상)를 반환
 const upperBound = (handCards, checkCard, start, end) => {
   if (start >= end) {
     if (handCards[end] === checkCard) {
@@ -56,7 +58,7 @@ const checkCards = input
 // 2. 핸드 카드 오름차순 정렬
 handCards.sort((a, b) => a - b);
 
-// 3. 이분탐색
+// 3. Upper Bound, Lower Bound 알고리즘을 이용해 인덱스 값 구하기
 let output = ""; // 출력값 저장
 let low;
 let up;
