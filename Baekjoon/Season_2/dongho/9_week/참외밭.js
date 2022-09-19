@@ -48,7 +48,7 @@ const shortWidth = dirArray[shortWidthIndex][1];
 const melon = Number(K);
 
 // 3. 참외밭 넓이 구하기
-// (긴 가로변 * 긴 세로변) - (빈 사각형 가로변 - 빈 사각형 세로변)
+// (큰 사각형 가로 변 * 큰 사각형 세로 변) - (작은 사각형 가로 변 - 작은 사각형 세로 변)
 const area = longWidth * longHeight - shortWidth * shortHeight;
 
 // 4. 참외의 수 구하기
