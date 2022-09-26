@@ -21,7 +21,7 @@ players.forEach((player) => {
     count++;
     // 그게 아니라면 반원 구간 안에 있는지 확인
   } else {
-    W_small = x < X ? x - X : x - (X + W);
+    W_small = x < X ? X - x : x - (X + W);
     H_small = Y + R - y;
     R_small = Math.sqrt(W_small ** 2 + H_small ** 2);
     if (R >= R_small) {

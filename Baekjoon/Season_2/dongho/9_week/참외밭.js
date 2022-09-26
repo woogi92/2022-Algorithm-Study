@@ -40,7 +40,7 @@ input.forEach((move, index) => {
   }
 });
 
-// 2. 빈 사각형 가로변, 세로변 길이 구하기
+// 2. 작은 사각형 가로변, 세로변 길이 구하기
 const shortHeightIndex = (longWidthIndex + 3) % 6;
 const shortWidthIndex = (longHeightIndex + 3) % 6;
 const shortHeight = dirArray[shortHeightIndex][1];
