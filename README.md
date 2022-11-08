@@ -83,6 +83,6 @@
 | 10주차(09.26~10.09) | 10_week | [기하 1](https://www.acmicpc.net/step/50) | ⬜️5️⃣ ~ |
 
 ### 시즌3: 바킹독의 실전 알고리즘
-|주차|폴더명|단원|
-|---|---|---|
-|1주차(11.07~11.13)|1_week|[배열](https://blog.encrypted.gg/927)|
+|주차|폴더명|단원|문제|
+|---|---|---|---|
+|1주차(11.07~11.13)|1_week|[배열](https://blog.encrypted.gg/927)|[문제](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x03.md)|
