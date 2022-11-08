@@ -10,8 +10,8 @@
 | Study | Coding | Coding | Coding | Coding |  -  | Coding |
 
 - 정기회의: 월요일 오후 9시
-- 참고 사이트: [백준](https://www.acmicpc.net/), [프로그래머스](https://programmers.co.kr/)
-- 언어: 동호(Node.js), 지연(C++), 원욱(Java)
+- 참고 사이트: [백준](https://www.acmicpc.net/), [바킹독의 실전 알고리즘] (https://blog.encrypted.gg/)
+- 언어: 동호(C, Node.js), 지연(C++), 원욱(Java)
 
 ## ✏️ 스터디 규칙
 
@@ -81,3 +81,7 @@
 | 8주차(08.29~09.11) | 8_week | [집합과 맵](https://www.acmicpc.net/step/49) | ⬜️5️⃣ ~ |
 | 9주차(09.12~09.25) | 9_week | [기하 1](https://www.acmicpc.net/step/50) | 🟫2️⃣ ~ |
 | 10주차(09.26~10.09) | 10_week | [기하 1](https://www.acmicpc.net/step/50) | ⬜️5️⃣ ~ |
+
+### 시즌3: 바킹독의 실전 알고리즘
+|주차|폴더명|단원|
+|1주차(11.07~11.13)|1_week|[배열](https://blog.encrypted.gg/927)|
