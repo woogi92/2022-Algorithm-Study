@@ -1,4 +1,4 @@
-# 2022-Algorithm-Study 시즌2
+# 2022-Algorithm-Study 시즌3
 
 > 코딩 테스트 준비를 위한 스터디입니다.
 
