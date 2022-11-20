@@ -11,7 +11,7 @@
 
 - 정기회의: 월요일 오후 9시
 - 참고 사이트: [백준](https://www.acmicpc.net/), [바킹독의 실전 알고리즘] (https://blog.encrypted.gg/)
-- 언어: 동호(C, Node.js), 지연(C++), 원욱(Java)
+- 언어: 동호(Java), 지연(C++), 원욱(Java)
 
 ## ✏️ 스터디 규칙
 
@@ -86,3 +86,5 @@
 |주차|폴더명|단원|문제|
 |---|---|---|---|
 |1주차(11.07~11.13)|1_week|[배열](https://blog.encrypted.gg/927)|[문제](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x03.md)|
+|2주차(11.14~11.20)|2_week|[연결 리스트](https://blog.encrypted.gg/932)|[문제](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x04.md)|
+
