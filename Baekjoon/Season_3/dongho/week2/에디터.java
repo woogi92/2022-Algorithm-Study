@@ -1,32 +1,94 @@
 /*
- * ¹®Á¦: ¹éÁØ 1406 ¿¡µğÅÍ
- * À¯Çü: ¿¬°á ¸®½ºÆ®
- * L - Ä¿¼­¸¦ ¿ŞÂÊÀ¸·Î ÇÑ Ä­ ¿Å±è (Ä¿¼­°¡ ¹®ÀåÀÇ ¸Ç ¾ÕÀÌ¸é ¹«½ÃµÊ)
- * D - Ä¿¼­¸¦ ¿À¸¥ÂÊÀ¸·Î ÇÑ Ä­ ¿Å±è (Ä¿¼­°¡ ¹®ÀåÀÇ ¸Ç µÚÀÌ¸é ¹«½ÃµÊ)
- * B - Ä¿¼­ ¿ŞÂÊ¿¡ ÀÖ´Â ¹®ÀÚ¸¦ »èÁ¦ÇÔ (Ä¿¼­°¡ ¹®ÀåÀÇ ¸Ç ¾ÕÀÌ¸é ¹«½ÃµÊ)
- * P - ¹®ÀÚ¸¦ Ä¿¼­ ¿ŞÂÊ¿¡ Ãß°¡ÇÔ
- * ´Ü, ¸í·É¾î°¡ ¼öÇàµÇ±â Àü¿¡ Ä¿¼­´Â ¹®ÀåÀÇ ¸Ç µÚ¿¡ À§Ä¡ÇÏ°í ÀÖ´Ù°í ÇÑ´Ù.
+ * ë¬¸ì œ: ë°±ì¤€ 1406 ì—ë””í„°
+ * ìœ í˜•: ì—°ê²° ë¦¬ìŠ¤íŠ¸
+ * L - ì»¤ì„œë¥¼ ì™¼ìª½ìœ¼ë¡œ í•œ ì¹¸ ì˜®ê¹€ (ì»¤ì„œê°€ ë¬¸ì¥ì˜ ë§¨ ì•ì´ë©´ ë¬´ì‹œë¨)
+ * D - ì»¤ì„œë¥¼ ì˜¤ë¥¸ìª½ìœ¼ë¡œ í•œ ì¹¸ ì˜®ê¹€ (ì»¤ì„œê°€ ë¬¸ì¥ì˜ ë§¨ ë’¤ì´ë©´ ë¬´ì‹œë¨)
+ * B - ì»¤ì„œ ì™¼ìª½ì— ìˆëŠ” ë¬¸ìë¥¼ ì‚­ì œí•¨ (ì»¤ì„œê°€ ë¬¸ì¥ì˜ ë§¨ ì•ì´ë©´ ë¬´ì‹œë¨)
+ * P - ë¬¸ìë¥¼ ì»¤ì„œ ì™¼ìª½ì— ì¶”ê°€í•¨
+ * ë‹¨, ëª…ë ¹ì–´ê°€ ìˆ˜í–‰ë˜ê¸° ì „ì— ì»¤ì„œëŠ” ë¬¸ì¥ì˜ ë§¨ ë’¤ì— ìœ„ì¹˜í•˜ê³  ìˆë‹¤ê³  í•œë‹¤.
  * <input>
- * 1 - ÃÊ±â¿¡ ÆíÁı±â¿¡ ÀÔ·ÂµÇ¾î ÀÖ´Â ¹®ÀÚ¿­ (N <= 100,000, ¿µ¾î ¼Ò¹®ÀÚ)
- * 2 - ÀÔ·ÂÇÒ ¸í·É¾îÀÇ °³¼ö¸¦ ³ªÅ¸³»´Â Á¤¼ö M (1 <= M <= 500,000)
- * 3~ - M°³ÀÇ ÁÙ¿¡ °ÉÃÄ ÀÔ·ÂÇÒ ¸í·É¾î°¡ ¼ø¼­´ë·Î ÁÖ¾îÁü (¸í·É¾î´Â ³× °¡Áö ÇüÅÂ)
+ * 1 - ì´ˆê¸°ì— í¸ì§‘ê¸°ì— ì…ë ¥ë˜ì–´ ìˆëŠ” ë¬¸ìì—´ (N <= 100,000, ì˜ì–´ ì†Œë¬¸ì)
+ * 2 - ì…ë ¥í•  ëª…ë ¹ì–´ì˜ ê°œìˆ˜ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ì •ìˆ˜ M (1 <= M <= 500,000)
+ * 3~ - Mê°œì˜ ì¤„ì— ê±¸ì³ ì…ë ¥í•  ëª…ë ¹ì–´ê°€ ìˆœì„œëŒ€ë¡œ ì£¼ì–´ì§ (ëª…ë ¹ì–´ëŠ” ë„¤ ê°€ì§€ í˜•íƒœ)
  * <output>
- * ¸ğµç ¸í·É¾î¸¦ ¼öÇàÇÏ°í ³­ ÈÄ ÆíÁı±â¿¡ ÀÔ·ÂµÇ¾î ÀÖ´Â ¹®ÀÚ¿­ Ãâ·Â
+ * ëª¨ë“  ëª…ë ¹ì–´ë¥¼ ìˆ˜í–‰í•˜ê³  ë‚œ í›„ í¸ì§‘ê¸°ì— ì…ë ¥ë˜ì–´ ìˆëŠ” ë¬¸ìì—´ ì¶œë ¥
  */
 
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class ¿¡µğÅÍ {
+public class ì—ë””í„° {
   static final int size = 100001; // N <= 100,000
-  static int[] data = new int[size];
+  static char[] data = new char[size];
   static int[] pre = new int[size];
   static int[] nxt = new int[size];
   static int unused = 1;
+  static int cursor = 0;
+
+  static void cursorMoveLeft() {
+    if(cursor > 0) cursor--;
+  }
+
+  static void cursorMoveRight() {
+    if(cursor+1 != unused) cursor++;
+  }
+
+  static void insert(char c) {
+    data[unused] = c;
+    pre[unused] = cursor;
+    nxt[unused] = nxt[cursor];
+    nxt[cursor] = unused;
+    if(nxt[cursor] != -1) pre[nxt[cursor]] = unused;
+    unused++;
+    cursor++;
+  }
+
+  static void delete() {
+    if(cursor != 0) {
+      nxt[pre[cursor-1]] = nxt[cursor-1];
+      if(nxt[cursor-1] != -1) pre[nxt[cursor-1]] = pre[cursor-1];
+    }
+  }
+
+  static void printText() {
+    int cur = nxt[0];
+    while(cur != -1) {
+      System.out.print(data[cur]);
+      cur = nxt[cur];
+    }
+  }
   public static void main(String[] args) {
     Arrays.fill(pre, -1);
     Arrays.fill(nxt, -1);
     String text = new Scanner(System.in).nextLine();
     int num = new Scanner(System.in).nextInt();
+
+    // ì´ˆê¸°ì— í¸ì§‘ê¸°ì— ì…ë ¥ë˜ì–´ ìˆëŠ” ë¬¸ìì—´ ì—°ê²° ë¦¬ìŠ¤íŠ¸ insert
+    for(int i = 0; i < text.length(); i++) {
+      insert(text.charAt(i));
+      System.out.println(cursor);
+    }
+
+    // ëª…ë ¹ì–´ ì‹¤í–‰
+    for(int i = 0; i < num; i++) {
+      String instruction = new Scanner(System.in).nextLine();
+      char type = instruction.charAt(0);
+      switch(type) {
+        case 'L':
+          cursorMoveLeft();
+          break;
+        case 'R':
+          cursorMoveRight();
+          break;
+        case 'B':
+          delete();
+          break;
+        case 'P':
+          char c = instruction.charAt(2);
+          insert(c);
+          break;
+      }
+      printText();
+    }
   }
 }
