@@ -18,36 +18,25 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class 에디터 {
-  static final int size = 100001; // N <= 100,000
+  static final int size = 10; // N <= 100,000
   static char[] data = new char[size];
   static int[] pre = new int[size];
   static int[] nxt = new int[size];
   static int unused = 1;
   static int cursor = 0;
 
-  static void cursorMoveLeft() {
-    if(cursor > 0) cursor--;
-  }
-
-  static void cursorMoveRight() {
-    if(cursor+1 != unused) cursor++;
-  }
-
   static void insert(char c) {
     data[unused] = c;
     pre[unused] = cursor;
     nxt[unused] = nxt[cursor];
-    nxt[cursor] = unused;
     if(nxt[cursor] != -1) pre[nxt[cursor]] = unused;
+    nxt[cursor] = unused;
     unused++;
-    cursor++;
   }
 
   static void delete() {
-    if(cursor != 0) {
-      nxt[pre[cursor-1]] = nxt[cursor-1];
-      if(nxt[cursor-1] != -1) pre[nxt[cursor-1]] = pre[cursor-1];
-    }
+    nxt[pre[cursor]] = nxt[cursor];
+    if(nxt[cursor] != -1) pre[nxt[cursor]] = pre[cursor];
   }
 
   static void printText() {
@@ -66,8 +55,12 @@ public class 에디터 {
     // 초기에 편집기에 입력되어 있는 문자열 연결 리스트 insert
     for(int i = 0; i < text.length(); i++) {
       insert(text.charAt(i));
-      System.out.println(cursor);
+      cursor++;
     }
+
+    System.out.println(Arrays.toString(data));
+    System.out.println(Arrays.toString(pre));
+    System.out.println(Arrays.toString(nxt));
 
     // 명령어 실행
     for(int i = 0; i < num; i++) {
@@ -75,20 +68,25 @@ public class 에디터 {
       char type = instruction.charAt(0);
       switch(type) {
         case 'L':
-          cursorMoveLeft();
+          if(pre[cursor] != -1) cursor = pre[cursor];
           break;
         case 'R':
-          cursorMoveRight();
+          if(nxt[cursor] != -1) cursor = nxt[cursor];
           break;
         case 'B':
-          delete();
-          break;
+          if(pre[cursor] != -1) {
+            delete();
+            cursor = pre[cursor];
+            break;
+          }
         case 'P':
           char c = instruction.charAt(2);
           insert(c);
+          cursor = nxt[cursor];
           break;
       }
-      printText();
+      System.out.println(cursor);
     }
+    printText();
   }
 }
