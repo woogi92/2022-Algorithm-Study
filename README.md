@@ -86,5 +86,5 @@
 |주차|폴더명|단원|문제|
 |---|---|---|---|
 |1주차(11.07~11.13)|1_week|[배열](https://blog.encrypted.gg/927)|[문제](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x03.md)|
-|2주차(11.14~11.20)|2_week|[연결 리스트](https://blog.encrypted.gg/932)|[문제](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x04.md)|
+|2주차(11.14~11.28)|2_week|[연결 리스트](https://blog.encrypted.gg/932)|[문제](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x04.md)|
 
