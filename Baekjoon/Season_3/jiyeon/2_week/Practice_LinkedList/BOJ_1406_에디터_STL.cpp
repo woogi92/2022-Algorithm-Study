@@ -7,42 +7,41 @@
     cin.tie(0);
 
     list<char> editor;
-    list<char>::iterator cursor = editor.begin();
 
     string s;
-    getline(cin, s);
+    cin >> s;
     
-    for(int i = 0; i < s.length(); i++) 
+    for(auto c: s) 
     {
-        editor.push_back(s.at(i));
-        cursor++;
+        editor.push_back(c);
     }
-    cursor++;
+    list<char>::iterator cursor = editor.end();
     
     int m;
     cin >> m;
-    while(m-- >= 0)
+    while(m--)
     {
-        string command;
-        getline(cin, command);
-        switch(command[0])
+        char op;
+        cin >> op;
+        switch(op)
         {
             case 'L': {
-                if(cursor != editor.begin()) --cursor;
+                if(cursor != editor.begin()) cursor--;
                 break;
             }
             case 'D': {
-                if(cursor != editor.end()) ++cursor;           
+                if(cursor != editor.end()) cursor++;           
                 break;
             }
             case 'B': {
-                if(editor.size() > 1 && cursor != editor.begin()) 
+                if(cursor != editor.begin()) 
                     cursor = editor.erase(--cursor);
             break;
             }
             case 'P': {
-                cursor = editor.insert(cursor, command[2]);
-                cursor++;
+                char add;
+                cin >> add;
+                editor.insert(cursor, add);
                 break;
             }
         }
@@ -55,6 +54,3 @@
 
     return 0;
  }
-    
-
- 
