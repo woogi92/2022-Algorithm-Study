@@ -88,4 +88,4 @@
 |1주차(11.07~11.13)|1_week|[배열](https://blog.encrypted.gg/927)|[문제](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x03.md)|
 |2주차(11.14~11.27)|2_week|[연결 리스트](https://blog.encrypted.gg/932)|[문제](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x04.md)|
 |3주차(12.26~01.01)|3_week|[스택](https://blog.encrypted.gg/933)|[문제](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x05.md)|
-
+|4주차(01.02~01.08)|4_week|[큐](https://blog.encrypted.gg/934)|[문제](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x06.md)|
