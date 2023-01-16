@@ -27,45 +27,27 @@ public class BOJ_10866 {
             switch(str){
                 case "push_front":
                     num = Integer.parseInt(sToken.nextToken());
-                    if(arr[head] == -1){
-                        arr[head--] = num;
-                    } else{
-                        arr[--head] = num;
-                    }
+                    arr[--head] = num;
                     size = tail-head;
                     break;
                 case "push_back":
                     num = Integer.parseInt(sToken.nextToken());
-                    if(arr[tail] == -1){
-                        arr[tail++] = num;
-                    } else{
-                        arr[++tail] = num;
-                    }
+                    arr[tail++] = num;
                     size = tail-head;
                     break;
                 case "pop_front":
                     if(size <= 0) writer.write(-1 + "\n");
                     else {
-                        if(arr[head] == -1){
-                            writer.write(arr[++head] + "\n");
-                            arr[head] = -1;
-                        } else{
-                            writer.write(arr[head] + "\n");
-                            arr[head++] = -1;
-                        }
+                        writer.write(arr[head] + "\n");
+                        arr[head++] = -1;
                     }
                     size = tail-head;
                     break;
                 case "pop_back":
                     if(size <= 0) writer.write(-1 + "\n");
                     else {
-                        if(arr[tail] == -1){
-                            writer.write(arr[--tail] + "\n");
-                            arr[tail] = -1;
-                        } else{
-                            writer.write(arr[tail] + "\n");
-                            arr[tail--] = -1;
-                        }
+                        writer.write(arr[--tail] + "\n");
+                        arr[tail] = -1;
                     }
                     size = tail-head;
                     break;
@@ -79,21 +61,13 @@ public class BOJ_10866 {
                 case "front":
                     if(size <= 0) writer.write(-1 + "\n");
                     else {
-                        if(arr[head] == -1){
-                            writer.write(arr[head+1] + "\n");
-                        } else{
-                            writer.write(arr[head] + "\n");
-                        }
+                        writer.write(arr[head] + "\n");
                     }
                     break;
                 case "back":
                     if(size <= 0) writer.write(-1 + "\n");
                     else {
-                        if(arr[tail] == -1){
-                            writer.write(arr[tail-1] + "\n");
-                        } else{
-                            writer.write(arr[tail] + "\n");
-                        }
+                        writer.write(arr[tail-1] + "\n");
                     }
                     break;
             }
